@@ -1,11 +1,11 @@
-import 'package:crave_app/screens/sexuality.dart';
-import 'package:crave_app/screens/signupbirthday.dart';
+import 'package:crave_app/screens/gender.dart';
+import 'package:crave_app/screens/payment.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/color.dart';
 
-class Gender extends StatelessWidget {
-  const Gender({Key? key}) : super(key: key);
+class Sexuality extends StatelessWidget {
+  const Sexuality({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,8 @@ class Gender extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(context,
-                  MaterialPageRoute(builder: (context) => SignUpBirthday()));
+              Navigator.pop(
+                  context, MaterialPageRoute(builder: (context) => Gender()));
             },
             icon: Icon(
               Icons.arrow_back_ios,
@@ -37,7 +37,7 @@ class Gender extends StatelessWidget {
             children: [
               SizedBox(height: 25),
               Text(
-                'Your Gender...',
+                'I am a...',
                 // textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
               ),
@@ -45,14 +45,22 @@ class Gender extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  InkWell(
-                      onTap: () {},
-                      child: Image(image: AssetImage('assets/Group 1069.png'))),
-                  Image(image: AssetImage('assets/Group 1068.png'))
+                  Image(
+                    image: AssetImage('assets/Group 1074.png'),
+                  ),
+                  Image(image: AssetImage('assets/Group 1073.png'))
                 ],
               ),
               SizedBox(height: 18),
-              Center(child: Image(image: AssetImage('assets/Group 1070.png'))),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image(
+                    image: AssetImage('assets/Group 1072.png'),
+                  ),
+                  Image(image: AssetImage('assets/Group 1071.png'))
+                ],
+              ),
               SizedBox(
                 height: 50,
               ),
@@ -62,7 +70,7 @@ class Gender extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Sexuality()));
+                          MaterialPageRoute(builder: (context) => Payment()));
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
