@@ -1,4 +1,4 @@
-import 'package:crave_app/screens/gender.dart';
+import 'package:crave_app/onboardingscreens/gender.dart';
 import 'package:crave_app/screens/payment.dart';
 import 'package:flutter/material.dart';
 

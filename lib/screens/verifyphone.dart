@@ -1,5 +1,5 @@
+import 'package:crave_app/onboardingscreens/setname.dart';
 import 'package:crave_app/screens/continuephone.dart';
-import 'package:crave_app/screens/setname.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 

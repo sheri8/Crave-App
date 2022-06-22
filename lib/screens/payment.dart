@@ -1,5 +1,5 @@
+import 'package:crave_app/onboardingscreens/sexuality.dart';
 import 'package:crave_app/screens/loading.dart';
-import 'package:crave_app/screens/sexuality.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/color.dart';
@@ -60,11 +60,14 @@ class Payment extends StatelessWidget {
                 height: 31,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(image: AssetImage('assets/Frame 1144.png')),
-                  Image(image: AssetImage('assets/Frame 1143.png')),
-                  Image(image: AssetImage('assets/Frame 1142.png'))
+                  Image.asset('assets/Frame 1144.png',width: 105,height:193),
+                  SizedBox(width: 2,),
+            Image.asset('assets/Frame 1143.png',width: 105,height:193),
+                              SizedBox(width: 2,),
+
+ Image.asset('assets/Frame 1142.png',width: 105,height:193,),
                 ],
               ),
               SizedBox(height: 39),

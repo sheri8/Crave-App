@@ -3,12 +3,16 @@ import 'package:crave_app/screens/verifyphone.dart';
 import 'package:crave_app/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:phone_form_field/phone_form_field.dart';
 
 class ContinuePhone extends StatelessWidget {
   const ContinuePhone({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    PhoneController controller;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -32,6 +36,7 @@ class ContinuePhone extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 25),
@@ -42,46 +47,33 @@ class ContinuePhone extends StatelessWidget {
               SizedBox(
                 height: 21,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
-                  child: Container(
-                    height: 45,
-                    width: 324,
-                    color: Colors.grey,
-                    child: IntlPhoneField(
-                      decoration: InputDecoration(
-                        hintText: 'Enter Phone Number',
-                        border: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        errorBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
-                        contentPadding:
-                            EdgeInsets.only(bottom: 3, left: 5, top: 44),
-                        // border: OutlineInputBorder(
-                        //   borderSide: BorderSide(),
-                        // ),
-                      ),
-                      initialCountryCode: 'PK',
-                      onChanged: (phone) {
-                        print(phone.completeNumber);
-                      },
+
+              PhoneFormField(
+                key: Key('phone-field'),
+                shouldFormat: true, // default
+                decoration: InputDecoration(
+                  hintText: "Enter Phone Number",
+                    border:
+                        OutlineInputBorder() // default to UnderlineInputBorder(),
+                    // ...
                     ),
-                  ),
-                ),
-                // child: TextField(
-                //   decoration: InputDecoration(
-                //     fillColor: Colors.white,
-                //     border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(20),
-                //     ),
-                //   ),
-                // ),
+                validator: PhoneValidator
+                    .validMobile(), // default PhoneValidator.valid()
+                countrySelectorNavigator:
+                    CountrySelectorNavigator.bottomSheet(),
+                showFlagInInput: true, // default
+                flagSize: 16, // default
+                autofillHints: [
+                  AutofillHints.telephoneNumber
+                ], // default to null
+                enabled: true, // default
+                autofocus: false, // default
+                autovalidateMode: AutovalidateMode.onUserInteraction, // default
+                onChanged: (p) => print('changed $p'),
               ),
+              SizedBox(height: 20,),
               Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet in sit tristique purus proin amet tortor. Quamed parturient orci nibh. Tortor diame adipiscing ac, proin neque. Neque ornare sit tristique'),
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet in sit tristique purus proin amet tortor. Quamed parturient orci nibh. Tortor diame adipiscing ac, proin neque. Neque ornare sit tristique',style: TextStyle(color: Color(0xff8F8F8F)),),
               SizedBox(height: 40),
               Container(
                 width: double.infinity,

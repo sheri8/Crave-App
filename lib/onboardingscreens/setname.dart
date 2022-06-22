@@ -1,4 +1,4 @@
-import 'package:crave_app/screens/signupbirthday.dart';
+import 'package:crave_app/onboardingscreens/signupbirthday.dart';
 import 'package:crave_app/screens/verifyphone.dart';
 import 'package:flutter/material.dart';
 

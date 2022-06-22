@@ -1,16 +1,14 @@
-import 'package:crave_app/screens/gender.dart';
-import 'package:crave_app/screens/setname.dart';
+import 'package:crave_app/onboardingscreens/sexuality.dart';
+import 'package:crave_app/onboardingscreens/signupbirthday.dart';
 import 'package:flutter/material.dart';
-import 'package:scroll_date_picker/scroll_date_picker.dart';
 
 import '../utils/color.dart';
 
-class SignUpBirthday extends StatelessWidget {
-  const SignUpBirthday({Key? key}) : super(key: key);
+class Gender extends StatelessWidget {
+  const Gender({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    DateTime _selectedDate = DateTime.now();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -18,8 +16,8 @@ class SignUpBirthday extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(
-                  context, MaterialPageRoute(builder: (context) => SetName()));
+              Navigator.pop(context,
+                  MaterialPageRoute(builder: (context) => SignUpBirthday()));
             },
             icon: Icon(
               Icons.arrow_back_ios,
@@ -32,50 +30,39 @@ class SignUpBirthday extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Padding(
-          padding: const EdgeInsets.all(28.0),
+          padding: EdgeInsets.all(28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 25),
               Text(
-                'What’s your birthday?',
+                'Your Gender...',
                 // textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
               ),
-              SizedBox(height: 11),
-              Text(
-                'Your birthday won’t be visible to others',
-                style: TextStyle(fontSize: 15, color: Color(0xffBDBDBD)),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                      onTap: () {},
+                      child: Image(image: AssetImage('assets/Group 1069.png'))),
+                  Image(image: AssetImage('assets/Group 1068.png'))
+                ],
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 18),
+              Center(child: Image(image: AssetImage('assets/Group 1070.png'))),
               SizedBox(
-                height: 250,
-                child: ScrollDatePicker(
-                  selectedDate: _selectedDate,
-                  locale: DatePickerLocale.koKR,
-                  onDateTimeChanged: (DateTime value) {
-                    // setState(() {
-                    //   _selectedDate = value;
-                    // });
-                  },
-                ),
+                height: 50,
               ),
-              SizedBox(height: 40),
-              Center(
-                child: Text(
-                  'Age 21',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-                ),
-              ),
-              SizedBox(height: 33),
               Container(
                 width: double.infinity,
                 height: 56,
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Gender()));
+                          MaterialPageRoute(builder: (context) => Sexuality()));
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
