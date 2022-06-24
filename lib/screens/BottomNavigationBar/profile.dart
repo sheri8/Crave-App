@@ -104,7 +104,7 @@ class Profile extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -124,7 +124,7 @@ class Profile extends StatelessWidget {
                                   'assets/bxs_message-square-edit.png'))
                         ]),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -134,7 +134,7 @@ class Profile extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

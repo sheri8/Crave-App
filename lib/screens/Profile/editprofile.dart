@@ -64,7 +64,8 @@ class EditProfile extends StatelessWidget {
             ),
             SizedBox(
               height: 20,
-            )
+            ),
+            //  Image.asset('assets/final.png',width: MediaQuery.of(context).size.width,fit: BoxFit.contain,),
           ],
         ),
       ),

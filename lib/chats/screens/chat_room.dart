@@ -1,0 +1,93 @@
+import '../app_theme.dart';
+import 'package:flutter/material.dart';
+import '../models/user_model.dart';
+import '../widgets/widgets.dart';
+
+class ChatRoom extends StatefulWidget {
+  const ChatRoom({Key? key, required this.user}) : super(key: key);
+
+  @override
+  _ChatRoomState createState() => _ChatRoomState();
+  final User user;
+}
+
+class _ChatRoomState extends State<ChatRoom> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+      
+        leading: Icon(Icons.keyboard_arrow_left,color: Color(0xffC70606),size: 30,),
+        backgroundColor: Colors.white,
+        toolbarHeight: 60,
+        centerTitle: false,
+        title: Row(
+          children: [
+            CircleAvatar(
+              radius: 25,
+              backgroundImage: AssetImage(
+                widget.user.avatar,
+              ),
+            ),
+              SizedBox(width: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.user.name,
+                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 17)
+
+                ),
+                Text(
+                  'active',
+                  style: MyTheme.bodyText1.copyWith(fontSize: 16),
+                ),
+              ],
+            ),
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                icon: Icon(
+                  Icons.videocam_outlined,
+                  size: 28,
+                  color: Color(0xffC70606),
+                ),
+                onPressed: () {}),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('assets/menu.png'),
+          )
+        ],
+        elevation: 2,
+      ),
+      backgroundColor: MyTheme.kPrimaryColor,
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+               
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                  child: Conversation(user: widget.user),
+                ),
+              ),
+            ),
+            buildChatComposer()
+          ],
+        ),
+      ),
+    );
+  }
+}
