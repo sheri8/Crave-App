@@ -38,10 +38,8 @@ Container buildChatComposer() {
                     ),
                   ),
                 ),
-                Icon(
-                  Icons.mic,
-                  color: Colors.black
-                )
+                         Image.asset('assets/mic.png',height: 20,),
+
               ],
             ),
           ),

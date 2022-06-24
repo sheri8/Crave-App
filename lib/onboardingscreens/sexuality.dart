@@ -23,7 +23,7 @@ class Sexuality extends StatelessWidget {
               Icons.arrow_back_ios,
               color: PrimaryColor,
             )),
-        title: Image.asset('assets/Logo.png'),
+        title: Image.asset('assets/Logo.png',width: 105,height: 18),
         centerTitle: true,
       ),
       body: SizedBox(
@@ -42,28 +42,99 @@ class Sexuality extends StatelessWidget {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
               ),
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image(
-                    image: AssetImage('assets/Group 1074.png'),
-                  ),
-                  Image(image: AssetImage('assets/Group 1073.png'))
-                ],
-              ),
-              SizedBox(height: 18),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image(
-                    image: AssetImage('assets/Group 1072.png'),
-                  ),
-                  Image(image: AssetImage('assets/Group 1071.png'))
-                ],
-              ),
-              SizedBox(
-                height: 50,
-              ),
+               Row(
+                  children: [
+                     Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xffC70606),
+                            width: 2
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        color: Color(0xffFFE9E9)
+                        ),
+                    
+                        width: 140,
+                        height:181,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Hetero',style: TextStyle(color: Color(0xffC70606),fontSize: 20,fontWeight: FontWeight.w600),),
+                             SizedBox(height: 10,),
+                            Image.asset('assets/het.png',width: 74,height: 121,),
+                             SizedBox(height: 10,),
+                          ],
+                        ),
+                    
+                     ),
+                    SizedBox(width: 10,),
+                    Container(
+                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                          color: Color(0xffE3E3E3),
+                      ),
+                      width: 140,
+                      height:181,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                         
+                          Text('Lesbian',style: TextStyle(color: Color(0xff848484),fontSize: 20,fontWeight: FontWeight.w600),),
+                                                   SizedBox(height: 10,),
+
+                          Image.asset('assets/les.png',width: 74,height: 121,),
+                           SizedBox(height: 10,),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  children: [
+                      Container(
+                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                          color: Color(0xffE3E3E3),
+                      ),
+                      width: 140,
+                      height:181,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                         
+                          Text('Gay',style: TextStyle(color: Color(0xff848484),fontSize: 20,fontWeight: FontWeight.w600),),
+                                                   SizedBox(height: 10,),
+
+                          Image.asset('assets/gay.png',width: 74,height: 121,),
+                           SizedBox(height: 10,),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+                    Container(
+                           decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                              color: Color(0xffE3E3E3),
+                          ),
+                          width: 140,
+                          height:181,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                             
+                              Text('Bisexual',style: TextStyle(color: Color(0xff848484),fontSize: 20,fontWeight: FontWeight.w600),),
+                                                       SizedBox(height: 10,),
+
+                              Image.asset('assets/bi.png',width: 74,height: 121,),
+                               SizedBox(height: 10,),
+                            ],
+                          ),
+                        ),
+                  ],
+                ),
+                
+              SizedBox(height: 20,),
               Container(
                 width: double.infinity,
                 height: 56,

@@ -29,7 +29,7 @@ class _VerifyPhoneState extends State<VerifyPhone> {
               Icons.arrow_back_ios,
               color: PrimaryColor,
             )),
-        title: Image.asset('assets/Logo.png'),
+        title: Image.asset('assets/Logo.png',width: 105,height: 18,),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -59,9 +59,11 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                     borderRadius: BorderRadius.circular(10),
                     fieldHeight: 54,
                     fieldWidth: 56,
+                    selectedFillColor: Colors.white,
+                    selectedColor: Colors.red,
                     inactiveFillColor: Colors.white,
                     inactiveColor: Color(0xffE5E5E5),
-                    activeFillColor: Color(0xffE5E5E5),
+                    activeFillColor: Colors.white
                   ),
                   animationDuration: Duration(milliseconds: 300),
                   backgroundColor: Colors.white,

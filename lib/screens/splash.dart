@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
               child:
-                  Image(image: AssetImage('assets/Logo Variants (Splash).png')))
+                  Image.asset('assets/splash.png',width: 118.29,height: 60,),)
         ],
       ),
     );

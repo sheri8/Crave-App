@@ -23,7 +23,7 @@ class Payment extends StatelessWidget {
               Icons.arrow_back_ios,
               color: PrimaryColor,
             )),
-        title: Image.asset('assets/Logo.png'),
+        title: Image.asset('assets/Logo.png',width: 105,height: 18),
         centerTitle: true,
         actions: [
           IconButton(

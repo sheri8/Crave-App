@@ -18,10 +18,12 @@ class Random extends StatelessWidget {
               fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         actions: [
-          InkWell(
-            onTap: () {},
-            child: Image(image: AssetImage('assets/Group.png')),
-          )
+      
+   Padding(
+     padding: const EdgeInsets.all(8.0),
+     child: Image.asset('assets/random.png',width: 22,height: 30,),
+   ),
+          
         ],
       ),
       body: SizedBox(

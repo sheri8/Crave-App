@@ -41,17 +41,21 @@ class Conversation extends StatelessWidget {
                       constraints: BoxConstraints(
                           maxWidth: MediaQuery.of(context).size.width * 0.6),
                       decoration: BoxDecoration(
-                          color: isMe ? MyTheme.kAccentColor : Colors.grey[200],
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(16),
-                            topRight: Radius.circular(16),
-                            bottomLeft: Radius.circular(isMe ? 12 : 0),
-                            bottomRight: Radius.circular(isMe ? 0 : 12),
-                          )),
+                          color: isMe ? MyTheme.kAccentColor : Color(0xffF9F9F9),
+                          // borderRadius: BorderRadius.all(
+                          //   topLeft: Radius.circular(16),
+                          //   topRight: Radius.circular(16),
+                          //   bottomLeft: Radius.circular(isMe ? 0 : 0),
+                          //   bottomRight: Radius.circular(isMe ? 0 : 0),
+                          // )
+                          borderRadius: BorderRadius.circular(12)
+                          ),
                       child: Text(
                         messages[index].text,
                         style: MyTheme.bodyTextMessage.copyWith(
-                            color: isMe ? Colors.white : Colors.grey[800]),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15,
+                            color: isMe ? Color(0xff707070) : Color(0xff585F66)),
                       ),
                     ),
                   ],
@@ -66,17 +70,15 @@ class Conversation extends StatelessWidget {
                         SizedBox(
                           width: 40,
                         ),
-                      Icon(
-                        Icons.done_all,
-                        size: 20,
-                        color: MyTheme.bodyTextTime.color,
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
+                      // Icon(
+                      //   Icons.done_all,
+                      //   size: 20,
+                      //   color: MyTheme.bodyTextTime.color,
+                      // ),
+                     
                       Text(
                         message.time,
-                        style: MyTheme.bodyTextTime,
+                        style: TextStyle(fontWeight: FontWeight.w500,fontSize: 10,color: Color(0xff606060).withOpacity(0.48))
                       )
                     ],
                   ),

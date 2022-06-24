@@ -17,45 +17,60 @@ class _ChatRoomState extends State<ChatRoom> {
     return Scaffold(
       appBar: AppBar(
       
-        leading: Icon(Icons.keyboard_arrow_left,color: Color(0xffC70606),size: 30,),
+        leading: Icon(Icons.arrow_back_ios,size: 30,color: Color(0xffC70606),),
+        
         backgroundColor: Colors.white,
         toolbarHeight: 60,
         centerTitle: false,
-        title: Row(
-          children: [
+        title:    Row(
+          children:[ 
             CircleAvatar(
-              radius: 25,
-              backgroundImage: AssetImage(
-                widget.user.avatar,
-              ),
-            ),
-              SizedBox(width: 10,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.user.name,
-                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 17)
+                  radius: 25,
+                  backgroundImage: AssetImage(
+                    widget.user.avatar,
+                  ),
+                ),
+                SizedBox(width: 10,),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 10,),
+            Text(
+              
+                      widget.user.name,
+                      style: TextStyle(color: Color(0xff121212),fontWeight: FontWeight.w500,fontSize: 16),
+                      textAlign: TextAlign.start,
+
+                    ),
+         
+                 Text(
+                  "active now",
+                  style: TextStyle(color: Color(0xff606060),fontWeight: FontWeight.w400,fontSize: 11)
 
                 ),
-                Text(
-                  'active',
-                  style: MyTheme.bodyText1.copyWith(fontSize: 16),
-                ),
-              ],
-            ),
-          ],
-        ),
+          ]   
+        ) ,
+        // title: Row(
+        //   children: [
+        
+        //       SizedBox(width: 10,),
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       children: [
+       
+        //         Text(
+        //           'active now',
+        //           style: MyTheme.bodyText1.copyWith(fontSize: 16),
+        //         ),
+        //       ],
+        //     ),
+        //   ],
+        // ),
+        ]),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: IconButton(
-                icon: Icon(
-                  Icons.videocam_outlined,
-                  size: 28,
-                  color: Color(0xffC70606),
-                ),
-                onPressed: () {}),
+            child: Image.asset('assets/video.png',width: 30,height: 18,)
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),

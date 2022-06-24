@@ -22,7 +22,7 @@ class _FeedState extends State<Feed> {
           onTap: () {},
           child: Image(image: AssetImage('assets/Vector_2.png')),
         ),
-        title: Image(image: AssetImage('assets/Logo.png')),
+        title: Image.asset('assets/Logo.png',width: 105,height: 18),
         centerTitle: true,
         actions: [
           InkWell(

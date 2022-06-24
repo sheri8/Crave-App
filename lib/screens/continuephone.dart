@@ -12,6 +12,7 @@ class ContinuePhone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  
     PhoneController controller;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -27,7 +28,7 @@ class ContinuePhone extends StatelessWidget {
               Icons.arrow_back_ios,
               color: PrimaryColor,
             )),
-        title: Image.asset('assets/Logo.png'),
+        title: Image.asset('assets/Logo.png', width: 105, height: 18),
         centerTitle: true,
       ),
       body: Padding(
@@ -42,17 +43,19 @@ class ContinuePhone extends StatelessWidget {
               SizedBox(height: 25),
               Text(
                 'Enter Phone Number',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               SizedBox(
                 height: 21,
               ),
-
               PhoneFormField(
                 key: Key('phone-field'),
                 shouldFormat: true, // default
                 decoration: InputDecoration(
-                  hintText: "Enter Phone Number",
+                    hintText: "Enter Phone Number",
                     border:
                         OutlineInputBorder() // default to UnderlineInputBorder(),
                     // ...
@@ -71,9 +74,13 @@ class ContinuePhone extends StatelessWidget {
                 autovalidateMode: AutovalidateMode.onUserInteraction, // default
                 onChanged: (p) => print('changed $p'),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet in sit tristique purus proin amet tortor. Quamed parturient orci nibh. Tortor diame adipiscing ac, proin neque. Neque ornare sit tristique',style: TextStyle(color: Color(0xff8F8F8F)),),
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet in sit tristique purus proin amet tortor. Quamed parturient orci nibh. Tortor diame adipiscing ac, proin neque. Neque ornare sit tristique',
+                style: TextStyle(color: Color(0xff8F8F8F)),
+              ),
               SizedBox(height: 40),
               Container(
                 width: double.infinity,
