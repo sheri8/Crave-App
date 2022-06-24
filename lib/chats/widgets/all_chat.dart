@@ -55,12 +55,13 @@ class AllChats extends StatelessWidget {
                             Text(
                               allChat.sender.name,
                               style: MyTheme.heading2.copyWith(
-                                fontSize: 16,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500
                               ),
                             ),
                             Text(
                               allChat.text,
-                              style: MyTheme.bodyText1,
+                              style: TextStyle(color: Color(0xff858585),fontSize: 14,fontWeight: FontWeight.w400)
                             ),
                           ],
                         ),
@@ -69,12 +70,16 @@ class AllChats extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
+                            Text(
+                            allChat.time,
+                            style: MyTheme.bodyTextTime,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
                           allChat.unreadCount == 0
-                              ? Icon(
-                                  Icons.done_all,
-                                  color: MyTheme.bodyTextTime.color,
-                                )
-                              : CircleAvatar(
+                              ?
+                               CircleAvatar(
                                   radius: 8,
                                   backgroundColor: MyTheme.kUnreadChatBG,
                                   child: Text(
@@ -84,14 +89,9 @@ class AllChats extends StatelessWidget {
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            allChat.time,
-                            style: MyTheme.bodyTextTime,
-                          )
+                                ):Text(""),
+                          
+                        
                         ],
                       ),
                     ],
