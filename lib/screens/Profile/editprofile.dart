@@ -36,7 +36,7 @@ class EditProfile extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(8),
         child: Column(
           children: [
             Row(
@@ -48,7 +48,7 @@ class EditProfile extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Row(
               children: [
@@ -84,7 +84,7 @@ class EditProfile extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             ListTile(
               leading: SizedBox(
@@ -93,7 +93,7 @@ class EditProfile extends StatelessWidget {
                 child: Image.asset('assets/Vector111.png')),
                 title: Text('Profile Information',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   color: Colors.black,
                   fontWeight: FontWeight.w500
                 ),),

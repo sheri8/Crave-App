@@ -41,54 +41,105 @@ class MyCraves extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: Colors.black),),
 SizedBox(height: 15),
-Row(children: [
-  InkWell(
-    onTap: () {},
-    child: Container(
-      height: 40,
-      width: 140,
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      
-      decoration: BoxDecoration(
-        color: Color(0xffDFDFE0),
-        borderRadius: BorderRadius.circular(20)
-      ),
-      child: Row(
-        children: [
-          Text('Casual Dating',
-          style: TextStyle(fontSize: 16,
-          fontWeight: FontWeight.w400,
-          color: Colors.black),),
-          SizedBox(width: 5),
-          Image.asset('assets/My Craves/Group.png')
-        ],
-      ),
-      )
-    ), 
-     InkWell(
-    onTap: () {},
-    child: Container(
-      height: 40,
-      width: 300,
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      
-      decoration: BoxDecoration(
-        color: PrimaryColor,
-        borderRadius: BorderRadius.circular(20)
-      ),
-      child: Row(
-        children: [
-          Text('Anonymous',
-          style: TextStyle(fontSize: 16,
-          fontWeight: FontWeight.w400,
-          color: Colors.white),),
-          SizedBox(width: 5),
-          Image.asset('assets/My Craves/Group111.png')
-        ],
-      ),
-      )
-    ), 
-],)
+   Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                           Image.asset('assets/silver.png',width: 143,height: 40,),
+                                                     SizedBox(width: 10,),
+
+                          Image.asset('assets/red.png',width: 143,height: 40,),
+                                                 
+
+                        ],
+                      ),
+                    ),
+
+                     Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/b.png',width: 170,height: 40,),
+                                                                               SizedBox(width: 10,),
+
+                           Image.asset('assets/n.png',width: 107,height: 40,),
+
+                          
+                                                 
+
+                        ],
+                      ),
+                    ),
+                      Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                           Image.asset('assets/silver.png',width: 143,height: 40,),
+                                                     SizedBox(width: 10,),
+
+                          Image.asset('assets/red.png',width: 143,height: 40,),
+                                                 
+
+                        ],
+                      ),
+                    ),
+
+                     Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/b.png',width: 170,height: 40,),
+                                                                               SizedBox(width: 10,),
+
+                           Image.asset('assets/n.png',width: 107,height: 40,),
+
+                          
+                                                 
+
+                        ],
+                      ),
+                    ),
+                      Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                           Image.asset('assets/silver.png',width: 143,height: 40,),
+                                                     SizedBox(width: 10,),
+
+                          Image.asset('assets/red.png',width: 143,height: 40,),
+                                                 
+
+                        ],
+                      ),
+                    ),
+
+                     Container(
+                     
+                      margin: EdgeInsets.only(left: 10,right: 10,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/b.png',width: 170,height: 40,),
+                                                                               SizedBox(width: 10,),
+
+                           Image.asset('assets/n.png',width: 107,height: 40,),
+
+                          
+                                                 
+
+                        ],
+                      ),
+                    ),
           ],
         ),
       ),

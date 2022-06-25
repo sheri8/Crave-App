@@ -1,3 +1,5 @@
+import 'package:google_fonts/google_fonts.dart';
+
 import '../models/message_model.dart';
 import '../models/user_model.dart';
 import '../app_theme.dart';
@@ -52,10 +54,19 @@ class Conversation extends StatelessWidget {
                           ),
                       child: Text(
                         messages[index].text,
-                        style: MyTheme.bodyTextMessage.copyWith(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                            color: isMe ? Color(0xff707070) : Color(0xff585F66)),
+                        style:
+                        GoogleFonts.getFont("Poppins",
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+    textStyle: TextStyle(color: isMe ? Color(0xff707070) : Color(0xff585F66), letterSpacing: .5),
+  ),
+                        
+                        
+                        
+                        //  MyTheme.bodyTextMessage.copyWith(
+                        //   fontWeight: FontWeight.w400,
+                        //   fontSize: 15,
+                        //     color: isMe ? Color(0xff707070) : Color(0xff585F66)),
                       ),
                     ),
                   ],

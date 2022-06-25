@@ -17,12 +17,15 @@ class Profile extends StatelessWidget {
               fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         actions: [
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => EditProfile()));
-            },
-            child: Image(image: AssetImage('assets/Vector (1).png')),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => EditProfile()));
+              },
+              child: Icon(Icons.settings,color:Color(0xffC70606)),
+            ),
           )
         ],
       ),
@@ -42,7 +45,9 @@ class Profile extends StatelessWidget {
               Align(
                   alignment: Alignment.bottomCenter,
                   child: Image.asset(
-                    'assets/Group 1155.png',
+                    'assets/profile.png',
+                    width: 138,
+                    height: 159,
                   ))
             ]),
           ),
@@ -108,45 +113,60 @@ class Profile extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Card(
-              color: Color(0xffF5F5F5),
+            child: Container(
+              width: 320,
+              height: 150,
+               decoration: BoxDecoration(
+                               color: Color(0xffF5F5F5),
+
+                        borderRadius: BorderRadius.circular(12)
+                      ),
               child: Padding(
-                padding: EdgeInsets.all(15),
-                child: Column(
-                  children: [
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  padding: EdgeInsets.all(8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                                             margin: EdgeInsets.only(left: 10,right: 10),
+
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          Image.asset('assets/Logo.png',width: 105,height: 18),
+                          Image.asset('assets/edit.png',width: 23,height: 25),
+                        ],),
+                      ),
+                    Container(
+                     
+                      margin: EdgeInsets.only(left: 20,right: 20,top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset('assets/Group 1164.png'),
-                          InkWell(
-                              onTap: () {},
-                              child: Image.asset(
-                                  'assets/bxs_message-square-edit.png'))
-                        ]),
-                    SizedBox(
-                      height: 10,
+                          Image.asset('assets/near.png',width: 127,height: 40,),
+                          SizedBox(width: 10,),
+                                                  Image.asset('assets/casual.png',width: 127,height: 40,),
+
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset('assets/Auto Layout Horizontal.png'),
-                        Image.asset('assets/Auto Layout Horizontal (1).png')
-                      ],
+                     Container(
+                     
+                      margin: EdgeInsets.only(left: 20,right: 20,top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/near.png',width: 127,height: 40,),
+                          SizedBox(width: 10,),
+                                                  Image.asset('assets/casual.png',width: 127,height: 40,),
+
+                        ],
+                      ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset('assets/Auto Layout Horizontal (3).png'),
-                        Image.asset('assets/Auto Layout Horizontal (2).png')
-                      ],
-                    ),
-                  ],
+                  ],)
+                  
                 ),
               ),
-            ),
+            
           )
         ],
       ),

@@ -79,7 +79,7 @@ class ContinuePhone extends StatelessWidget {
               ),
               Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet in sit tristique purus proin amet tortor. Quamed parturient orci nibh. Tortor diame adipiscing ac, proin neque. Neque ornare sit tristique',
-                style: TextStyle(color: Color(0xff8F8F8F)),
+                style: TextStyle(color: Color(0xff8F8F8F),fontSize: 11,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 40),
               Container(

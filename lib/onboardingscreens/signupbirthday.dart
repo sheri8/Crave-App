@@ -45,21 +45,27 @@ class SignUpBirthday extends StatelessWidget {
               ),
               SizedBox(height: 11),
               Text(
-                'Your birthday won’t be visible to others',
+                'Your birthday won’t be visible to \nothers',
                 style: TextStyle(fontSize: 15, color: Color(0xffBDBDBD)),
               ),
               SizedBox(height: 40),
-              SizedBox(
-                height: 250,
-                child: ScrollDatePicker(
-            
-                  selectedDate: _selectedDate,
-                  locale: DatePickerLocale.enUS,
-                  onDateTimeChanged: (DateTime value) {
-                    // setState(() {
-                    //   _selectedDate = value;
-                    // });
-                  },
+              Container(
+                margin: EdgeInsets.only(left: 10,right: 10),
+                child: SizedBox(
+                  width: 299,
+                  height: 250,
+                  child: ScrollDatePicker(
+                    style: DatePickerStyle(
+                      selectedTextStyle: TextStyle(color: Colors.black)
+                    ),
+                    selectedDate: _selectedDate,
+                    locale: DatePickerLocale.enUS,
+                    onDateTimeChanged: (DateTime value) {
+                      // setState(() {
+                      //   _selectedDate = value;
+                      // });
+                    },
+                  ),
                 ),
               ),
               SizedBox(height: 40),
